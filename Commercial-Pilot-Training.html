@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commercial Pilot Training Academy</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#1B365D',secondary:'#4A90E2'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-section {
+            background-image: linear-gradient(to right, rgba(27, 54, 93, 0.85), rgba(27, 54, 93, 0.7), rgba(27, 54, 93, 0.5), rgba(27, 54, 93, 0.3), rgba(27, 54, 93, 0.1)), url('https://public.readdy.ai/ai/img_res/18c9e7ef6b66335b6b343d72bc70a988.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .flag-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .cta-section {
+            background-image: linear-gradient(to right, rgba(27, 54, 93, 0.9), rgba(27, 54, 93, 0.8)), url('https://public.readdy.ai/ai/img_res/9f593de14e755e9617b4a1ec43d60961.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none; 
+            margin: 0; 
+        }
+        .custom-checkbox {
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+        }
+        .custom-checkbox input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background-color: #fff;
+            border: 2px solid #cbd5e1;
+            border-radius: 4px;
+        }
+        .custom-checkbox input:checked ~ .checkmark {
+            background-color: #1B365D;
+            border-color: #1B365D;
+        }
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+        .custom-checkbox input:checked ~ .checkmark:after {
+            display: block;
+        }
+        .custom-checkbox .checkmark:after {
+            left: 6px;
+            top: 2px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+        <div class="container mx-auto px-3 py-3 flex justify-between items-center">
+            <a href="#" class="text-xl font-['Pacifico'] text-primary"><img src="logo.png " class="w-20" alt="logo"></a>
+            
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#" class="text-gray-700 hover:text-primary font-medium transition duration-300">Home</a>
+                <a href="#courses" class="text-gray-700 hover:text-primary font-medium transition duration-300">Courses</a>
+                <a href="#countries" class="text-gray-700 hover:text-primary font-medium transition duration-300">Countries</a>
+                <a href="#features" class="text-gray-700 hover:text-primary font-medium transition duration-300">Features</a>
+                <a href="#contact" class="text-gray-700 hover:text-primary font-medium transition duration-300">Contact</a>
+                <button class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition duration-300 whitespace-nowrap">Enroll Now</button>
+            </nav>
+            
+            <button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700">
+                <i class="ri-menu-line ri-lg"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section pt-32 pb-20 w-full">
+        <div class="container mx-auto px-6 w-full">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">Begin Your Journey to the Skies</h1>
+                <p class="text-xl text-gray-100 mb-8">World-class commercial pilot training programs with international certification. Train with industry experts and fly with the best airlines globally.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="bg-[#F5A623] text-primary px-8 py-3 !rounded-button font-semibold hover:bg-opacity-90 transition duration-300 whitespace-nowrap">Start Your Career</button>
+                    <button class="bg-white text-primary px-8 py-3 !rounded-button font-semibold hover:bg-opacity-90 transition duration-300 whitespace-nowrap">Explore Courses</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-10 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <p class="text-4xl font-bold text-primary mb-2">25+</p>
+                    <p class="text-gray-600">Years Experience</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-4xl font-bold text-primary mb-2">15,000+</p>
+                    <p class="text-gray-600">Pilots Trained</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-4xl font-bold text-primary mb-2">98%</p>
+                    <p class="text-gray-600">Placement Rate</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-4xl font-bold text-primary mb-2">42</p>
+                    <p class="text-gray-600">Global Locations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Country Flag Navigation Grid -->
+    <section id="countries" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Training Locations Worldwide</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Choose from our global network of training centers, each offering specialized programs with local aviation authority certification.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- USA -->
+                <div class="flag-card bg-white rounded shadow-md overflow-hidden transition duration-300">
+                    <div class="h-40 bg-cover bg-center" style="background-image: url('https://public.readdy.ai/ai/img_res/452dca1a28aff46c3ff1f8d2d6203c6a.jpg')"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">United States</h3>
+                        <p class="text-gray-600 mb-4">12 Training Centers</p>
+                        <p class="text-sm text-gray-500 mb-4">FAA certified programs with access to major airline partnerships</p>
+                        <button class="text-primary font-medium flex items-center !rounded-button whitespace-nowrap">
+                            View Courses <i class="ri-arrow-right-line ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- UK -->
+                <div class="flag-card bg-white rounded shadow-md overflow-hidden transition duration-300">
+                    <div class="h-40 bg-cover bg-center" style="background-image: url('https://public.readdy.ai/ai/img_res/22036170e5578356882bbe8340faa14e.jpg')"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">United Kingdom</h3>
+                        <p class="text-gray-600 mb-4">8 Training Centers</p>
+                        <p class="text-sm text-gray-500 mb-4">CAA approved training with European route experience</p>
+                        <button class="text-primary font-medium flex items-center !rounded-button whitespace-nowrap">
+                            View Courses <i class="ri-arrow-right-line ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Australia -->
+                <div class="flag-card bg-white rounded shadow-md overflow-hidden transition duration-300">
+                    <div class="h-40 bg-cover bg-center" style="background-image: url('https://public.readdy.ai/ai/img_res/268ad2554b3098c0e4ca1d6b2ef92610.jpg')"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Australia</h3>
+                        <p class="text-gray-600 mb-4">5 Training Centers</p>
+                        <p class="text-sm text-gray-500 mb-4">CASA certified with extensive outback flying experience</p>
+                        <button class="text-primary font-medium flex items-center !rounded-button whitespace-nowrap">
+                            View Courses <i class="ri-arrow-right-line ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Canada -->
+                <div class="flag-card bg-white rounded shadow-md overflow-hidden transition duration-300">
+                    <div class="h-40 bg-cover bg-center" style="background-image: url('https://public.readdy.ai/ai/img_res/c904b978cbacfc02ab5535f47e0ab9af.jpg')"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Canada</h3>
+                        <p class="text-gray-600 mb-4">7 Training Centers</p>
+                        <p class="text-sm text-gray-500 mb-4">Transport Canada certified with winter operations training</p>
+                        <button class="text-primary font-medium flex items-center !rounded-button whitespace-nowrap">
+                            View Courses <i class="ri-arrow-right-line ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Germany -->
+                <div class="flag-card bg-white rounded shadow-md overflow-hidden transition duration-300">
+                    <div class="h-40 bg-cover bg-center" style="background-image: url('https://public.readdy.ai/ai/img_res/140ae2ac29fea9068cd2d0e38532a4f7.jpg')"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Germany</h3>
+                        <p class="text-gray-600 mb-4">4 Training Centers</p>
+                        <p class="text-sm text-gray-500 mb-4">EASA compliant with Lufthansa partnership programs</p>
+                        <button class="text-primary font-medium flex items-center !rounded-button whitespace-nowrap">
+                            View Courses <i class="ri-arrow-right-line ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Singapore -->
+                <div class="flag-card bg-white rounded shadow-md overflow-hidden transition duration-300">
+                    <div class="h-40 bg-cover bg-center" style="background-image: url('https://public.readdy.ai/ai/img_res/64e55fb73d8bda74781131732b7bdbde.jpg')"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Singapore</h3>
+                        <p class="text-gray-600 mb-4">2 Training Centers</p>
+                        <p class="text-sm text-gray-500 mb-4">CAAS certified with Asian route specialization</p>
+                        <button class="text-primary font-medium flex items-center !rounded-button whitespace-nowrap">
+                            View Courses <i class="ri-arrow-right-line ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- UAE -->
+                <div class="flag-card bg-white rounded shadow-md overflow-hidden transition duration-300">
+                    <div class="h-40 bg-cover bg-center" style="background-image: url('https://public.readdy.ai/ai/img_res/e904db49a08355b732ee602e56024331.jpg')"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">United Arab Emirates</h3>
+                        <p class="text-gray-600 mb-4">3 Training Centers</p>
+                        <p class="text-sm text-gray-500 mb-4">GCAA approved with desert operations training</p>
+                        <button class="text-primary font-medium flex items-center !rounded-button whitespace-nowrap">
+                            View Courses <i class="ri-arrow-right-line ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- South Africa -->
+                <div class="flag-card bg-white rounded shadow-md overflow-hidden transition duration-300">
+                    <div class="h-40 bg-cover bg-center" style="background-image: url('https://public.readdy.ai/ai/img_res/64e5116916434f4ec8ffeab0b481bf3c.jpg')"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">South Africa</h3>
+                        <p class="text-gray-600 mb-4">3 Training Centers</p>
+                        <p class="text-sm text-gray-500 mb-4">SACAA certified with African terrain experience</p>
+                        <button class="text-primary font-medium flex items-center !rounded-button whitespace-nowrap">
+                            View Courses <i class="ri-arrow-right-line ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <button class="bg-white border border-primary text-primary px-6 py-3 !rounded-button font-medium hover:bg-primary hover:text-white transition duration-300 whitespace-nowrap">View All Locations</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Categories Section -->
+    <section id="courses" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Training Programs</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Comprehensive pilot training programs designed to meet international standards and prepare you for a successful aviation career.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Commercial Pilot License -->
+                <div class="feature-card bg-white rounded shadow-lg p-8 border-t-4 border-primary">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="ri-plane-line ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4 text-center">Commercial Pilot License (CPL)</h3>
+                    <p class="text-gray-600 mb-6 text-center">Complete training program to obtain your commercial pilot license with multi-engine and instrument ratings.</p>
+                    <ul class="mb-6 space-y-2">
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                            <span class="text-gray-600">200+ flight hours</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                            <span class="text-gray-600">Multi-engine rating</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                            <span class="text-gray-600">Instrument rating</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                            <span class="text-gray-600">Advanced navigation</span>
+                        </li>
+                    </ul>
+                    <div class="text-center">
+                        <p class="text-xl font-bold text-primary mb-4">$75,000</p>
+                        <button class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition duration-300 whitespace-nowrap">Program Details</button>
+                    </div>
+                </div>
+                
+                <!-- Airline Transport Pilot License -->
+                <div class="feature-card bg-white rounded shadow-lg p-8 border-t-4 border-secondary">
+                    <div class="w-16 h-16 bg-secondary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="ri-flight-takeoff-line ri-2x text-secondary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4 text-center">Airline Transport Pilot License (ATPL)</h3>
+                    <p class="text-gray-600 mb-6 text-center">Advanced program for experienced pilots seeking to qualify for airline captain positions.</p>
+                    <ul class="mb-6 space-y-2">
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-secondary mt-1 mr-2"></i>
+                            <span class="text-gray-600">1500+ flight hours</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-secondary mt-1 mr-2"></i>
+                            <span class="text-gray-600">Type ratings available</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-secondary mt-1 mr-2"></i>
+                            <span class="text-gray-600">Advanced systems training</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-secondary mt-1 mr-2"></i>
+                            <span class="text-gray-600">Crew resource management</span>
+                        </li>
+                    </ul>
+                    <div class="text-center">
+                        <p class="text-xl font-bold text-secondary mb-4">$95,000</p>
+                        <button class="bg-secondary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition duration-300 whitespace-nowrap">Program Details</button>
+                    </div>
+                </div>
+                
+                <!-- Type Rating Programs -->
+                <div class="feature-card bg-white rounded shadow-lg p-8 border-t-4 border-[#F5A623]">
+                    <div class="w-16 h-16 bg-[#F5A623] bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="ri-dashboard-3-line ri-2x text-[#F5A623]"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4 text-center">Type Rating Programs</h3>
+                    <p class="text-gray-600 mb-6 text-center">Specialized training for specific aircraft types required by airlines and operators.</p>
+                    <ul class="mb-6 space-y-2">
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-[#F5A623] mt-1 mr-2"></i>
+                            <span class="text-gray-600">Boeing 737 NG/MAX</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-[#F5A623] mt-1 mr-2"></i>
+                            <span class="text-gray-600">Airbus A320 family</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-[#F5A623] mt-1 mr-2"></i>
+                            <span class="text-gray-600">Full simulator training</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-[#F5A623] mt-1 mr-2"></i>
+                            <span class="text-gray-600">Line training options</span>
+                        </li>
+                    </ul>
+                    <div class="text-center">
+                        <p class="text-xl font-bold text-[#F5A623] mb-4">$30,000</p>
+                        <button class="bg-[#F5A623] text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition duration-300 whitespace-nowrap">Program Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Features Section -->
+    <section id="features" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Why Choose Our Training Academy</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">We offer industry-leading training with state-of-the-art facilities and experienced instructors.</p>
+            </div>
+            
+            <!-- Feature 1 -->
+            <div class="flex flex-col md:flex-row items-center mb-16 gap-8">
+                <div class="w-full md:w-1/2">
+                    <img src="https://public.readdy.ai/ai/img_res/12e327b6b6a50b997e8bf141876b0b65.jpg" alt="Flight Simulators" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Advanced Flight Simulators</h3>
+                    <p class="text-gray-600 mb-6">Our training centers feature the latest full-motion flight simulators certified to Level D standards, providing the most realistic training experience possible.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center mr-3 mt-1">
+                                <i class="ri-check-line text-white"></i>
+                            </div>
+                            <span class="text-gray-700">Full-motion simulators for Boeing and Airbus aircraft</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center mr-3 mt-1">
+                                <i class="ri-check-line text-white"></i>
+                            </div>
+                            <span class="text-gray-700">Realistic emergency scenario training</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center mr-3 mt-1">
+                                <i class="ri-check-line text-white"></i>
+                            </div>
+                            <span class="text-gray-700">Advanced visual systems with global airport database</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center mr-3 mt-1">
+                                <i class="ri-check-line text-white"></i>
+                            </div>
+                            <span class="text-gray-700">Simulator sessions recorded for detailed debriefing</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Feature 2 -->
+            <div class="flex flex-col md:flex-row-reverse items-center mb-16 gap-8">
+                <div class="w-full md:w-1/2">
+                    <img src="https://public.readdy.ai/ai/img_res/8d2d01375c65d5f67d83c6d53ee45daa.jpg" alt="Expert Instructors" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Experienced Instructors</h3>
+                    <p class="text-gray-600 mb-6">Learn from industry veterans with thousands of flight hours and experience with major airlines worldwide.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 rounded-full bg-secondary flex items-center justify-center mr-3 mt-1">
+                                <i class="ri-check-line text-white"></i>
+                            </div>
+                            <span class="text-gray-700">Instructors with 10,000+ flight hours on average</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 rounded-full bg-secondary flex items-center justify-center mr-3 mt-1">
+                                <i class="ri-check-line text-white"></i>
+                            </div>
+                            <span class="text-gray-700">Former airline captains and check airmen</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 rounded-full bg-secondary flex items-center justify-center mr-3 mt-1">
+                                <i class="ri-check-line text-white"></i>
+                            </div>
+                            <span class="text-gray-700">Specialized instructors for each training phase</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 rounded-full bg-secondary flex items-center justify-center mr-3 mt-1">
+                                <i class="ri-check-line text-white"></i>
+                            </div>
+                            <span class="text-gray-700">Low student-to-instructor ratio for personalized training</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Feature 3 -->
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="w-full md:w-1/2">
+                    <img src="https://public.readdy.ai/ai/img_res/5682f9977033914afe63741b0ddd5e50.jpg" alt="Modern Fleet" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Modern Training Fleet</h3>
+                    <p class="text-gray-600 mb-6">Train on a diverse fleet of well-maintained aircraft equipped with the latest avionics and safety features.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 rounded-full bg-[#F5A623] flex items-center justify-center mr-3 mt-1">
+                                <i class="ri-check-line text-white"></i>
+                            </div>
+                            <span class="text-gray-700">Single and multi-engine training aircraft</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 rounded-full bg-[#F5A623] flex items-center justify-center mr-3 mt-1">
+                                <i class="ri-check-line text-white"></i>
+                            </div>
+                            <span class="text-gray-700">Glass cockpit avionics systems</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 rounded-full bg-[#F5A623] flex items-center justify-center mr-3 mt-1">
+                                <i class="ri-check-line text-white"></i>
+                            </div>
+                            <span class="text-gray-700">Regular maintenance exceeding regulatory requirements</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 rounded-full bg-[#F5A623] flex items-center justify-center mr-3 mt-1">
+                                <i class="ri-check-line text-white"></i>
+                            </div>
+                            <span class="text-gray-700">Advanced safety features and weather radar</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">What Our Graduates Say</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Hear from pilots who have successfully completed our training programs and now fly for major airlines.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-6">
+                        <div class="text-yellow-400 flex">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"The training I received was exceptional. The instructors were knowledgeable and supportive, and the facilities were world-class. I'm now flying for Emirates and couldn't be happier with my career."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold mr-4">JD</div>
+                        <div>
+                            <p class="font-semibold text-gray-800">James Davidson</p>
+                            <p class="text-gray-500 text-sm">First Officer, Emirates</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-6">
+                        <div class="text-yellow-400 flex">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"From zero flight experience to flying for a major airline in just 24 months. The structured program and simulator training gave me the confidence I needed to succeed in this competitive industry."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white font-bold mr-4">SM</div>
+                        <div>
+                            <p class="font-semibold text-gray-800">Sarah Mitchell</p>
+                            <p class="text-gray-500 text-sm">First Officer, British Airways</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-6">
+                        <div class="text-yellow-400 flex">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"The airline partnerships and job placement assistance were invaluable. Within weeks of completing my training, I had multiple job offers from regional airlines. Worth every penny invested."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-[#F5A623] rounded-full flex items-center justify-center text-white font-bold mr-4">RK</div>
+                        <div>
+                            <p class="font-semibold text-gray-800">Robert Kim</p>
+                            <p class="text-gray-500 text-sm">Captain, Delta Connection</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CTA Section -->
+    <section id="contact" class="cta-section py-16 text-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold mb-4">Start Your Pilot Career Today</h2>
+                    <p class="text-lg opacity-90 mb-8">Fill out the form below to receive detailed information about our programs, financing options, and upcoming start dates.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-xl p-8">
+                    <form>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="firstName" class="block text-gray-700 font-medium mb-2">First Name</label>
+                                <input type="text" id="firstName" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Enter your first name">
+                            </div>
+                            <div>
+                                <label for="lastName" class="block text-gray-700 font-medium mb-2">Last Name</label>
+                                <input type="text" id="lastName" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Enter your last name">
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Enter your email address">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Enter your phone number">
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="program" class="block text-gray-700 font-medium mb-2">Program of Interest</label>
+                            <div class="relative">
+                                <select id="program" class="w-full px-4 py-3 border border-gray-300 rounded appearance-none focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent pr-8">
+                                    <option value="" disabled selected>Select a program</option>
+                                    <option value="cpl">Commercial Pilot License (CPL)</option>
+                                    <option value="atpl">Airline Transport Pilot License (ATPL)</option>
+                                    <option value="typeRating">Type Rating Programs</option>
+                                    <option value="instructor">Flight Instructor Course</option>
+                                    <option value="refresher">Pilot Refresher Training</option>
+                                </select>
+                                <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                    <i class="ri-arrow-down-s-line text-gray-500"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Additional Information</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Tell us about your aviation background and goals"></textarea>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="custom-checkbox pl-7 block relative text-gray-700 cursor-pointer">
+                                <input type="checkbox" class="absolute opacity-0 cursor-pointer">
+                                <span class="checkmark"></span>
+                                I agree to receive information about training programs and promotional offers
+                            </label>
+                        </div>
+                        
+                        <div class="text-center">
+                            <button type="submit" class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition duration-300 whitespace-nowrap">Request Information</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-primary text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <a href="#" class="text-3xl font-['Pacifico'] text-white mb-6 inline-block">logo</a>
+                    <p class="text-gray-300 mb-6">Global leader in commercial pilot training with locations worldwide. Turning aviation dreams into successful careers since 1998.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20 transition duration-300">
+                            <i class="ri-facebook-fill text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20 transition duration-300">
+                            <i class="ri-twitter-x-fill text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20 transition duration-300">
+                            <i class="ri-instagram-fill text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20 transition duration-300">
+                            <i class="ri-linkedin-fill text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">About Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Our Programs</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Training Locations</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Flight School Blog</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Careers</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Programs</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Commercial Pilot License</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Airline Transport Pilot License</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Type Rating Programs</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Flight Instructor Course</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Pilot Refresher Training</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Simulator Training</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Contact Information</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="ri-map-pin-line mt-1 mr-3 text-gray-300"></i>
+                            <span class="text-gray-300">1234 Aviation Way, Orlando, FL 32827, USA</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-phone-line mr-3 text-gray-300"></i>
+                            <span class="text-gray-300">+1 (800) 555-7890</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-mail-line mr-3 text-gray-300"></i>
+                            <span class="text-gray-300">info@pilotacademy.com</span>
+                        </li>
+                    </ul>
+                    
+                    <h4 class="text-lg font-semibold mt-8 mb-4">Subscribe to Newsletter</h4>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email address" class="px-4 py-2 rounded-l border-none focus:outline-none text-gray-800 w-full">
+                        <button type="submit" class="bg-[#F5A623] text-primary px-4 py-2 !rounded-r-button font-medium hover:bg-opacity-90 transition duration-300 whitespace-nowrap">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-700 text-center text-gray-400 text-sm">
+                <div class="flex justify-center space-x-6 mb-4">
+                    <i class="ri-visa-fill ri-2x"></i>
+                    <i class="ri-mastercard-fill ri-2x"></i>
+                    <i class="ri-paypal-fill ri-2x"></i>
+                    <i class="ri-american-express-fill ri-2x"></i>
+                </div>
+                <p>&copy; 2025 Commercial Pilot Training Academy. All rights reserved.</p>
+                <div class="flex justify-center space-x-6 mt-4 text-xs">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Flag card hover animation
+        const flagCards = document.querySelectorAll('.flag-card');
+        flagCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-10px)';
+                card.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+                card.style.transition = 'all 0.3s ease';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+                card.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)';
+                card.style.transition = 'all 0.3s ease';
+            });
+        });
+        
+        // Custom checkbox functionality
+        const checkboxes = document.querySelectorAll('.custom-checkbox input');
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const checkmark = this.nextElementSibling;
+                if (this.checked) {
+                    checkmark.style.backgroundColor = '#1B365D';
+                    checkmark.style.borderColor = '#1B365D';
+                } else {
+                    checkmark.style.backgroundColor = '#fff';
+                    checkmark.style.borderColor = '#cbd5e1';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
